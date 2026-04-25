@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bj32o3u55cbim"]
 
+[ext_resource type="Script" uid="uid://b3dlw3b2xskpx" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+
 [node name="MainMenu" type="Control" unique_id=359016908]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_l6cm7")
 
 [node name="Panel" type="Panel" parent="." unique_id=1377376746]
 layout_mode = 1
@@ -30,7 +33,25 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="Panel/VBoxContainer" unique_id=550312314]
+[node name="Start" type="Button" parent="Panel/VBoxContainer" unique_id=550312314]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Start Game"
+
+[node name="Quit" type="Button" parent="Panel/VBoxContainer" unique_id=1218641995]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Exit"
+
+[node name="Label" type="Label" parent="Panel" unique_id=1928544803]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 296.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 64
+text = "ENDLESS-TRACK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Panel/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
