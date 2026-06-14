@@ -1,3 +1,47 @@
 [gd_scene format=3 uid="uid://2xdoiiw1n121"]
 
+[ext_resource type="PackedScene" uid="uid://ccs7ldxl0fodi" path="res://scenes/ground.tscn" id="1_w5aja"]
+[ext_resource type="Script" uid="uid://ckpxomt182v5e" path="res://scripts/game_scene.gd" id="1_ycayy"]
+[ext_resource type="PackedScene" uid="uid://busjtyp2ocbqp" path="res://scenes/car_scene.tscn" id="2_onqr8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ycayy"]
+size = Vector3(1, 0.70410156, 1)
+
 [node name="GameScene" type="Node3D" unique_id=1511246047]
+script = ExtResource("1_ycayy")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1374497127]
+transform = Transform3D(-0.8660255, -0.43301287, 0.25000006, 0.32659155, -0.11128706, 0.9385912, -0.37860015, 0.89449155, 0.23779562, 0, 37.1027, 90.87927)
+shadow_enabled = true
+
+[node name="Ground" parent="." unique_id=1454627816 instance=ExtResource("1_w5aja")]
+
+[node name="Area3D" type="Area3D" parent="Ground" unique_id=1399335927]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0.033641815, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/Area3D" unique_id=1641500412]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0.0021263598, 0)
+shape = SubResource("BoxShape3D_ycayy")
+
+[node name="Ground2" parent="." unique_id=134048781 instance=ExtResource("1_w5aja")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -99.97127)
+
+[node name="Area3D" type="Area3D" parent="Ground2" unique_id=1015882191]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0.033641815, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground2/Area3D" unique_id=792970210]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0.0021263598, 0)
+shape = SubResource("BoxShape3D_ycayy")
+
+[node name="CarScene" parent="." unique_id=2126824290 instance=ExtResource("2_onqr8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3687458, 52.32603)
+
+[node name="Quit" type="Button" parent="." unique_id=1211843669]
+offset_left = 1486.0
+offset_top = 24.0
+offset_right = 1569.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 36
+text = "Quit"
+
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

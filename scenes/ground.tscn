@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://ccs7ldxl0fodi"]
+
+[ext_resource type="Texture2D" uid="uid://ccrqwk0xkslnn" path="res://assets/dark-texture-details-of-surface-of-asphalt-or-tamac-on-new-road-background-or-wallpaper-meterial-cpncept-design-free-photo.jpg" id="1_pybca"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mi8v4"]
+albedo_texture = ExtResource("1_pybca")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lmksl"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7ylpw"]
+material = SubResource("StandardMaterial3D_lmksl")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pybca"]
+
+[node name="Ground" type="Node3D" unique_id=1454627816]
+
+[node name="GroundArea" type="StaticBody3D" parent="." unique_id=1761763550]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25701487, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GroundArea" unique_id=755979049]
+transform = Transform3D(100, 0, 0, 0, 10, 0, 0, 0, 100, 0, -4.9292755, 0)
+material_override = SubResource("StandardMaterial3D_mi8v4")
+mesh = SubResource("BoxMesh_7ylpw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GroundArea" unique_id=1330881297]
+transform = Transform3D(100, 0, 0, 0, 0.5, 0, 0, 0, 100, 0, 0, 0)
+shape = SubResource("BoxShape3D_pybca")

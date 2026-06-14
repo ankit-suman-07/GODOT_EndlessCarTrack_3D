@@ -1,4 +1,4 @@
-extends Control
+extends Node3D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -12,8 +12,4 @@ func _process(delta: float) -> void:
 
 
 func _on_quit_pressed() -> void:
-	get_tree().quit()
-
-
-func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/game_scene.tscn")
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
