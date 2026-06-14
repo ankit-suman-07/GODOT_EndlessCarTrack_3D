@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ccs7ldxl0fodi"]
 
 [ext_resource type="Texture2D" uid="uid://ccrqwk0xkslnn" path="res://assets/dark-texture-details-of-surface-of-asphalt-or-tamac-on-new-road-background-or-wallpaper-meterial-cpncept-design-free-photo.jpg" id="1_pybca"]
+[ext_resource type="PackedScene" uid="uid://bdgdwkxfqanin" path="res://scenes/boundary_scene.tscn" id="2_mi8v4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mi8v4"]
 albedo_texture = ExtResource("1_pybca")
@@ -25,3 +26,33 @@ mesh = SubResource("BoxMesh_7ylpw")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GroundArea" unique_id=1330881297]
 transform = Transform3D(100, 0, 0, 0, 0.5, 0, 0, 0, 100, 0, 0, 0)
 shape = SubResource("BoxShape3D_pybca")
+
+[node name="boundary_scene" parent="." unique_id=533462961 instance=ExtResource("2_mi8v4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.36907, 9.991936, 39.56137)
+
+[node name="boundary_scene2" parent="." unique_id=1705992327 instance=ExtResource("2_mi8v4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.36907, 9.991936, 19.442146)
+
+[node name="boundary_scene3" parent="." unique_id=1818537833 instance=ExtResource("2_mi8v4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.36907, 9.991936, -0.67708015)
+
+[node name="boundary_scene4" parent="." unique_id=1945830825 instance=ExtResource("2_mi8v4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.36907, 9.991936, -20.893042)
+
+[node name="boundary_scene5" parent="." unique_id=926111873 instance=ExtResource("2_mi8v4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.36907, 9.991936, -40.818817)
+
+[node name="boundary_scene6" parent="." unique_id=2081938263 instance=ExtResource("2_mi8v4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.94502, 9.991936, 39.56137)
+
+[node name="boundary_scene7" parent="." unique_id=1280739912 instance=ExtResource("2_mi8v4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.94502, 9.991936, 19.442146)
+
+[node name="boundary_scene8" parent="." unique_id=1353645282 instance=ExtResource("2_mi8v4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.94502, 9.991936, -0.67708015)
+
+[node name="boundary_scene9" parent="." unique_id=280010530 instance=ExtResource("2_mi8v4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.94502, 9.991936, -20.893042)
+
+[node name="boundary_scene10" parent="." unique_id=1177586720 instance=ExtResource("2_mi8v4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.94502, 9.991936, -40.818817)

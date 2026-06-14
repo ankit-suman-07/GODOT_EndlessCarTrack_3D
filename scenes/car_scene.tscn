@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://busjtyp2ocbqp"]
 
 [ext_resource type="Script" uid="uid://dv427jqj6yfuj" path="res://scripts/car_scene.gd" id="1_xerfl"]
+[ext_resource type="Texture2D" uid="uid://dahapcynvtuqe" path="res://assets/car_body.jpg" id="2_gtsar"]
+[ext_resource type="Texture2D" uid="uid://bcwecfw3hkj3f" path="res://assets/tyre_texture.jpg" id="3_0lg5q"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e2su5"]
 albedo_color = Color(0.9054623, 0.4020026, 0.38075444, 1)
+albedo_texture = ExtResource("2_gtsar")
 
 [sub_resource type="BoxMesh" id="BoxMesh_e2su5"]
 material = SubResource("StandardMaterial3D_e2su5")
@@ -12,10 +15,14 @@ size = Vector3(1, 0.5, 2)
 [sub_resource type="BoxShape3D" id="BoxShape3D_e2su5"]
 size = Vector3(1, 0.56018066, 1.9040527)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p5cy6"]
+albedo_texture = ExtResource("3_0lg5q")
+
 [sub_resource type="CylinderMesh" id="CylinderMesh_xerfl"]
+material = SubResource("StandardMaterial3D_p5cy6")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xerfl"]
-albedo_color = Color(0.11312672, 0.012759981, 0.005124138, 1)
+albedo_color = Color(0, 0, 0, 0)
 
 [node name="CarScene" type="Node3D" unique_id=2126824290]
 
